@@ -1,4 +1,7 @@
+<div align="center">
+
 ### Hi, I'm Dabomi! 👋
+
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=KimDabomi&show_icons=true&theme=dracula)
 
 [![Solved.ac
@@ -6,3 +9,4 @@
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KimDabomi&layout=compact)](https://github.com/KimDabomi/github-readme-stats)
 
+</div>
