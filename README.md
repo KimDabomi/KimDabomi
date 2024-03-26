@@ -3,6 +3,8 @@
 
 <div align="center">
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FKimDabomi%2Fhit-counter&count_bg=%23000000&title_bg=%238C8C8C&icon=&icon_color=%23943838&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 <a href="https://mamomi.tistory.com" target="_blank">
 
 ![tistory](https://img.shields.io/badge/Tistory-000000?style=flat&logo=Tistory&logoColor=#000000)
