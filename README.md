@@ -6,8 +6,4 @@
 
 ![tistory](https://img.shields.io/badge/Tistory-000000?style=flat&logo=Tistory&logoColor=#000000)
 
-<p align="center">
-  <img src="/github-metrics.svg" alt="Metrics" width="60%">
-</p>
-
 </div>
