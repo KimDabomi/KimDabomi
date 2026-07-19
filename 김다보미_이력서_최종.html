@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김다보미 이력서 및 경력기술서</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 18mm 20mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      color: #111827;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+      font-size: 13px;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 18mm 18mm 20mm;
+    }
+
+    .header {
+      padding-bottom: 18px;
+      border-bottom: 2px solid #111827;
+      margin-bottom: 26px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .role {
+      margin-top: 6px;
+      color: #374151;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-top: 14px;
+      color: #4b5563;
+      font-size: 12px;
+    }
+
+    .contact a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    .skills-section, .education-section, .experience-section, .career-section {
+      margin-top: 60px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #d1d5db;
+      font-size: 16px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .intro-highlight {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .intro-text {
+      color: #374151;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 18px;
+    }
+
+    .skill-group-title {
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .skill-list {
+      color: #374151;
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 22px;
+    }
+
+    .experience-item:last-child,
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .period {
+      flex: 0 0 auto;
+      color: #6b7280;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .position {
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .promotion {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: -2px 0 8px;
+      padding: 4px 9px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      color: #92400e;
+      font-size: 11.3px;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    .reason {
+      color: #6b7280;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .stack {
+      margin: 6px 0 8px;
+      color: #4b5563;
+      font-size: 12px;
+    }
+
+    .summary {
+      margin-bottom: 8px;
+      color: #374151;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 7px;
+      color: #374151;
+    }
+
+    li strong {
+      color: #111827;
+    }
+
+    .sub-desc {
+      display: block;
+      margin-top: 2px;
+      color: #4b5563;
+    }
+
+    .education-title {
+      font-weight: 800;
+    }
+
+    .education-desc {
+      margin-top: 2px;
+      color: #4b5563;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 16px 0;
+    }
+
+    /* ===== 경력기술서 전용 클래스 (기존 스타일과 톤을 맞춰 확장) ===== */
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      background: #f3f4f6;
+      padding: 1px 4px;
+      border-radius: 4px;
+      color: #1f2937;
+    }
+
+    .career-project {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+    }
+
+    .career-project:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .career-project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 0 0 10px;
+    }
+
+    .career-project-head + .career-project-head {
+      margin-top: 32px;
+    }
+
+    .career-project h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+      font-size: 15.5px;
+    }
+
+    .career-badge {
+      flex: 0 0 auto;
+      color: #6b7280;
+      font-size: 11px;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fff;
+      white-space: nowrap;
+    }
+
+    .career-stack {
+      color: #2563eb;
+      font-weight: 750;
+      font-size: 10.8px;
+      margin-top: 4px;
+    }
+
+    .career-overview {
+      font-size: 12px;
+      color: #374151;
+    }
+
+    .career-overview p {
+      color: #374151;
+    }
+
+    .career-section-block {
+      margin-top: 12px;
+    }
+
+    .career-decision-list li {
+      padding-left: 1px;
+    }
+
+    .career-initiative {
+      margin-top: 11px;
+      padding: 9px 11px;
+      border-left: 3px solid #fde68a;
+      background: #fffbeb;
+    }
+
+    .career-initiative h3 {
+      color: #000000;
+      margin-bottom: 5px;
+    }
+
+    .career-impact {
+      margin-top: 12px;
+      padding: 9px 12px;
+      border-left: 3px solid #2563eb;
+      background: #eff6ff;
+      color: #1f2937;
+      font-size: 12px;
+    }
+
+    .career-impact h3 {
+      margin-bottom: 5px;
+    }
+
+    .career-impact strong {
+      color: #111827;
+    }
+
+    .career-h3 {
+      margin: 0 0 5px;
+      font-size: 13px;
+      color: #000000;
+      font-weight: 850;
+      letter-spacing: -0.01em;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #2563eb;
+      }
+
+      .career-project:nth-of-type(2),
+      .career-project:nth-of-type(4) {
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1 class="name">김다보미</h1>
+      <div class="role">Backend Developer · Product Engineer</div>
+      <div class="contact">
+        <span>Phone. 010-3341-0934</span>
+        <span>Email. <a href="mailto:cdabomi60@gmail.com">cdabomi60@gmail.com</a></span>
+        <span><a href="https://github.com/Kimdabomi" target="_blank">GitHub</a></span>
+        <span><a href="https://kimdabomi.github.io" target="_blank">Blog</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Introduction</h2>
+      <p class="intro-highlight">유연한 소통을 바탕으로 합리적인 의사결정을 이끌어내고, 열린 태도로 끊임없이 성장하는 백엔드 개발자입니다.</p>
+      <p class="intro-text">
+        새로운 기술이나 비즈니스 도전에 직면했을 때 두려움보다 호기심을 가지고 주도적으로 마주합니다. 협업 시 뛰어난 소통 역량과 유연한 소프트 스킬을 발휘하여 다양한 이해관계자 속에서도 건강한 논의와 명확한 합의점을 도출해 내는 강점이 있습니다. 동료들의 피드백을 적극적으로 수용하고 이를 업무와 코드에 신속하게 반영하여 개선해 나가는 과정을 즐기며, 이를 통해 팀과 서비스에 긍정적인 시너지를 더합니다.
+      </p>
+    </section>
+
+    <section class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-list">Kotlin · Java · TypeScript · PHP</div>
+        </div>
+        <div>
+          <div class="skill-group-title">Backend & Frontend</div>
+          <div class="skill-list">Spring Boot · Spring Security · Spring Batch · JPA · QueryDSL · React</div>
+        </div>
+        <div>
+          <div class="skill-group-title">Database</div>
+          <div class="skill-list">PostgreSQL · MySQL</div>
+        </div>
+        <div>
+          <div class="skill-group-title">Infra & Tools</div>
+          <div class="skill-list">Jenkins · Docker · Sentry · GitHub Actions</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section">
+      <h2>Work Experience</h2>
+
+      <article class="experience-item">
+        <div class="item-header">
+          <h3>한빛앤</h3>
+          <div class="period">2024.08. ~ 현재</div>
+        </div>
+        <div class="position">Product Engineer</div>
+        <div class="stack">Spring Boot · Kotlin · Java · React · PHP · PostgreSQL · MySQL</div>
+        <p class="summary">
+          백엔드 API 개발을 중심으로 운영툴(Admin)과 사용자 웹 서비스의 프론트엔드 개발을 담당하며, 신규 기능 개발 및 레거시 서비스를 신규 API 구조로 점진 전환, 서비스 운영·유지보수를 수행하고 있습니다. <br />
+          근속 연수 3년이라는 기존의 승진 요건을 깨고, 뛰어난 업무 성과를 인정받아 1년 6개월 만에 사원에서 선임으로 특별 승진했습니다. (2026.03.)
+        </p>
+        <ul>
+          <li>
+            <strong>레거시 주문/결제 시스템의 신규 API 아키텍처 전환 및 점진적 무중단 이관</strong>
+            <span class="sub-desc">빈번한 오류와 이탈률이 높은 PHP 5.4 레거시를 신규 API 구조로 재설계하고 점진적 마이그레이션을 수행하여, 서비스 중단 없이 결제 오류율 0.1% 달성 및 물류 처리 소요 시간을 일 평균 60분에서 즉시 처리로 100% 단축했습니다.</span>
+          </li>
+          <li>
+            <strong>통합 인증 시스템 구축 및 소셜 로그인(OAuth) 도입</strong>
+            <span class="sub-desc">파편화된 레거시 관리자 인증 체계를 단일 시스템으로 일원화하고 카카오/애플 OAuth API 및 웹 클라이언트를 풀스택으로 신규 개발하여, 전년 동기 대비 신규 회원가입 유입률 163.2% 증가 및 시스템 보안성을 확보했습니다.</span>
+          </li>
+          <li>
+            <strong>확장 가능한 표준 게시판 기능 설계 및 CRUD API 개발</strong>
+            <span class="sub-desc">단발성 국가 산업 요구사항 충족을 넘어, 전사 도메인에서 재사용할 수 있는 공통 게시판/게시물/댓글 구조를 추상화·컴포넌트화하여 설계 및 CRUD API를 구축함으로써 향후 서비스 확장의 기반을 다졌습니다.</span>
+          </li>
+          <li>
+            <strong>Sentry 기반 모니터링 체계 구축 및 배치 트러블슈팅</strong>
+            <span class="sub-desc">실시간 장애 감지를 위해 Sentry와 Slack을 연동한 예외 로깅 시스템을 구축하고, AWS Lambda 웜 스타트 환경 내 Spring Batch Context 캐싱 구조 도입을 통한 OOM 장애 해결, 이종 DB(PostgreSQL ↔ MySQL) 간 캐릭터셋 마이그레이션을 통한 데이터 유실 예방 등 시스템 가용성을 높였습니다.</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="item-header">
+          <h3>딜랏</h3>
+          <div class="period">2024.04. ~ 2024.07.</div>
+        </div>
+        <div class="position">Backend Developer</div>
+        <div class="reason">회사 재정 악화로 인한 사업 종료</div>
+        <div class="stack">Firebase · Strapi · TypeScript</div>
+        <ul>
+          <li>GitHub Actions 기반 자동 배포 환경 구축</li>
+          <li>백오피스 데이터 집계 및 관리자 기능 개발</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="item-header">
+          <h3>콜링크</h3>
+          <div class="period">2023.02. ~ 2023.09.</div>
+        </div>
+        <div class="position">Software Developer</div>
+        <div class="reason">회사 재정 악화로 1인 기업으로 전환</div>
+        <ul>
+          <li>워드프레스 기반 웹사이트 제작 및 SEO 최적화</li>
+          <li>백링크 자동화 프로그램 유지보수</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="education-section">
+      <h2>Education</h2>
+
+      <article class="education-item">
+        <div class="item-header">
+          <div class="education-title">항해99 18기 수료</div>
+          <div class="period">2023.12.11. ~ 2024.03.18.</div>
+        </div>
+        <div class="education-desc">Backend 개발 - Spring 심화 과정</div>
+      </article>
+
+      <article class="education-item">
+        <div class="item-header">
+          <div class="education-title">이젠아카데미 국비교육 수료</div>
+          <div class="period">2022.08.08. ~ 2023.01.27.</div>
+        </div>
+        <div class="education-desc">Full-Stack 웹개발자 과정 (Frontend & Backend) · JavaScript · React · Node.js</div>
+      </article>
+
+      <article class="education-item">
+        <div class="item-header">
+          <div class="education-title">목원대학교 졸업</div>
+          <div class="period">2014.03. ~ 2018.08.</div>
+        </div>
+        <div class="education-desc">수학교육과 학사</div>
+      </article>
+    </section>
+
+    <section class="career-section">
+      <h2>경력기술서</h2>
+
+      <article class="career-project">
+        <div class="career-project-head">
+          <div>
+            <h2>1. 서비스 중단 없이 레거시 주문 시스템을 API 기반 구조로 점진 전환</h2>
+            <div class="career-stack">Spring Boot · Spring Batch · PostgreSQL · MySQL · React · PHP</div>
+          </div>
+          <span class="career-badge">주문/배송/적립금</span>
+        </div>
+
+        <div class="career-overview">
+          <h3 class="career-h3">배경 및 해결 과제</h3>
+          <p>PHP 5.4 기반 주문·결제 시스템은 주문, 배송, 적립금 로직이 레거시 데이터베이스 직접 조회 방식으로 결합되어 있어 변경 시 장애 위험이 높았습니다. 동시에 물류 출고 메일과 적립금 만료 처리는 수작업 의존도가 높아 운영 공수가 지속적으로 발생했습니다. 기존 관리자·사용자 화면을 유지한 채 신규 API 구조로 이관해야 했기 때문에, 기능 교체보다 신·구 시스템의 공존과 데이터 정합성 유지가 핵심 과제였습니다.</p>
+        </div>
+
+        <div class="career-section-block">
+          <h3 class="career-h3">기술적 의사결정</h3>
+          <ul class="career-decision-list">
+            <li><strong>관리자 API와 사용자 API의 책임을 분리</strong>하고, 사용자 주문 조회에서는 클라이언트가 전달한 회원 식별자를 신뢰하지 않고 인증 컨텍스트에서 추출한 회원 정보로 조회 범위를 제한했습니다.</li>
+            <li>주문 상태 변경을 단순 상태값 수정이 아니라 <strong>상품 유형, 이전 상태, 예약 판매 여부를 고려한 상태 전이 규칙</strong>으로 모델링해 잘못된 배송·거래 상태 변경을 서버에서 차단했습니다.</li>
+            <li>출고 데이터 조회, 출고 명세서·엑셀 생성, 환경별 수신자 관리, 메일 발송을 하나의 관리자 API 흐름으로 구성하고, 발송 전 요약 조회 API를 별도로 제공해 운영자가 수취인·상품·수량·가격을 검증할 수 있도록 했습니다.</li>
+            <li>적립금 만료 처리는 Spring Batch의 Reader–Processor–Writer 구조로 분리하고, 소멸 예정 알림에서는 이메일 미등록 회원 제외, 개별 실패 격리, 동시성 제어를 적용했습니다.</li>
+          </ul>
+        </div>
+
+        <div class="career-initiative">
+          <h3 class="career-h3">자발적 개선</h3>
+          <p>출고 메일 발송을 단순 자동화하는 데 그치지 않고, 운영자가 발송 전에 대상 데이터를 검증할 수 있는 조회 흐름까지 함께 제안해 수작업 오류 가능성을 줄였습니다.</p>
+        </div>
+
+        <div class="career-impact">
+          <h3 class="career-h3">결과</h3>
+          결제 오류를 추적할 수 있는 모니터링 기반을 마련해 오류율을 <strong>0.1% 미만</strong>으로 낮추고, 일 평균 약 <strong>60분</strong>이 소요되던 물류 메일 처리 업무를 실시간 자동화 흐름으로 전환했습니다.
+        </div>
+      </article>
+
+      <article class="career-project">
+        <div class="career-project-head">
+          <div>
+            <h2>2. 레거시 호환성을 유지한 통합 인증 시스템과 카카오·애플 OAuth 구축</h2>
+            <div class="career-stack">Spring Boot · PostgreSQL · MySQL · Next.js</div>
+          </div>
+          <span class="career-badge">인증/회원</span>
+        </div>
+
+        <div class="career-overview">
+          <h3 class="career-h3">배경 및 해결 과제</h3>
+          <p>일반 로그인, 소셜 로그인, 레거시 관리자 인증이 서로 다른 구조로 운영되어 회원 생성과 계정 연동 로직이 파편화되어 있었습니다. 신규 인증 체계를 도입하면서도 비밀번호가 없는 소셜 회원, 기존 레거시 식별자, 휴면 계정과 같은 예외 케이스를 흡수해야 했고, 카카오와 애플의 서로 다른 OAuth 응답 방식까지 웹 클라이언트에서 일관되게 처리해야 했습니다.</p>
+        </div>
+
+        <div class="career-section-block">
+          <h3 class="career-h3">기술적 의사결정</h3>
+          <ul class="career-decision-list">
+            <li>외부 OAuth 인증 결과를 내부 회원 도메인과 매핑한 뒤 자체 보안 토큰을 발급하도록 구성하고, 기존 회원 로그인과 신규 회원 등록을 <strong>단일 소셜 인증 엔드포인트</strong>에서 처리했습니다.</li>
+            <li>Apple OAuth의 <code>response_mode=form_post</code> 특성을 고려해 Next.js API Route에서 authorization code를 수신한 뒤 로그인 페이지로 전달하는 중계 구조를 설계했습니다.</li>
+            <li>비밀번호가 없는 소셜 회원도 레거시 회원으로 등록할 수 있도록 신규 회원 정보 업데이트와 레거시 저장 책임을 분리하고, 레거시 식별자 생성은 데이터베이스 시퀀스로 통일했습니다.</li>
+            <li>OAuth 장애 원인 추적을 위해 프론트 요청과 백엔드 로그에 <code>redirect_uri</code>를 포함하고, provider 오류 유형별로 예외와 로그 레벨을 구분했습니다.</li>
+          </ul>
+        </div>
+
+        <div class="career-initiative">
+          <h3 class="career-h3">자발적 개선</h3>
+          <p>카카오 인증 코드 중복 오류를 단순 재현하는 데 그치지 않고, 요청이 정상 클라이언트에서 발생했는지 임의 요청인지 구분할 수 있도록 <code>redirect_uri</code>를 관측 지표로 추가하고 외부 인증 요청·응답 로깅 구조를 개선했습니다.</p>
+        </div>
+
+        <div class="career-impact">
+          <h3 class="career-h3">결과</h3>
+          파편화된 인증 흐름을 일원화하고 카카오·애플·일반 회원가입을 하나의 회원 도메인으로 통합했습니다. 전년 동기 대비 신규 회원가입 유입률이 <strong>163.2% 증가</strong>했으며, 소셜 회원과 레거시 회원 간 데이터 불일치 가능성을 줄였습니다.
+        </div>
+      </article>
+
+      <article class="career-project">
+        <div class="career-project-head">
+          <div>
+            <h2>3. 전사 재사용을 고려한 공통 게시판과 아티클 관리 구조 설계</h2>
+            <div class="career-stack">Spring Boot · PHP · React · PostgreSQL · MySQL</div>
+          </div>
+          <span class="career-badge">게시판/콘텐츠</span>
+        </div>
+
+        <div class="career-overview">
+          <h3 class="career-h3">배경 및 해결 과제</h3>
+          <p>국가 사업 심사를 위해 질의응답 게시판을 단기간에 제공해야 했지만, 특정 화면 전용 기능으로 구축하면 이후 공지·FAQ·이벤트·교강사 게시판마다 유사 구조가 반복될 가능성이 높았습니다. 동시에 사내 아티클 데이터를 신규 구조로 관리하면서 기존 관리 시스템과의 생성·수정·삭제 동기화를 유지해야 했습니다.</p>
+        </div>
+
+        <div class="career-section-block">
+          <h3 class="career-h3">기술적 의사결정</h3>
+          <ul class="career-decision-list">
+            <li>게시물 타입, 게시 상태, 댓글·대댓글, 썸네일, 이벤트 연동, 작성자·타임스탬프, 표준 코드, 성능 인덱스를 포함한 <strong>공통 게시물 모델</strong>을 설계했습니다.</li>
+            <li>이벤트 게시판은 이벤트 ID, 교강사 게시판은 상품 ID가 필수라는 규칙을 서버 검증으로 내재화해 새로운 클라이언트가 추가되어도 동일한 정합성 규칙이 적용되도록 했습니다.</li>
+            <li>관리자 API는 임시저장·검수중 데이터를 포함해 관리하고, public API는 <code>PUBLISHED</code> 상태만 노출하도록 책임과 조회 조건을 분리했습니다.</li>
+            <li>아티클은 임시저장·게시·검수대기, 주제·태그, 연관 게시글, 노출 순서를 관리하는 콘텐츠 모델로 설계하고, 신규 시스템과 레거시 콘텐츠의 연결 기준을 일원화했습니다.</li>
+            <li>레거시 조회 로직 내부에 흩어져 있던 필터를 검색 조건 DTO와 QueryDSL 기반 복합 필터·정렬·페이지네이션 구조로 추상화해 public 페이지와 운영툴에서 재사용할 수 있도록 했습니다.</li>
+          </ul>
+        </div>
+
+        <div class="career-initiative">
+          <h3 class="career-h3">자발적 개선</h3>
+          <p>단발성 질의응답 기능 요구를 그대로 구현하지 않고, 향후 신규 게시판 개설 비용을 줄일 수 있도록 전사 공통 구조로 확장해 설계했습니다.</p>
+        </div>
+
+        <div class="career-impact">
+          <h3 class="career-h3">결과</h3>
+          국가 사업 심사 요구사항을 충족하면서도 공지·FAQ·이벤트·교강사 게시판으로 확장 가능한 기반을 확보했습니다. 아티클 개편 이후에도 기존 트래픽 지표를 안정적으로 유지하고, 신규·레거시 콘텐츠 간 동기화 정합성을 높였습니다.
+        </div>
+      </article>
+
+      <article class="career-project">
+        <div class="career-project-head">
+          <div>
+            <h2>4. 대량 기업회원 가입의 병목을 제거하고 식별자 생성 책임을 DB로 이관</h2>
+            <div class="career-stack">Spring Boot · JPA/Hibernate · PostgreSQL</div>
+          </div>
+          <span class="career-badge">성능/정합성</span>
+        </div>
+
+        <div class="career-overview">
+          <h3 class="career-h3">배경 및 해결 과제</h3>
+          <p>B2B 사업 확장으로 수십~수백 명의 기업회원을 한 번에 등록해야 했지만, 초기 구현에서는 50명 등록에 17초 이상이 소요되었습니다. 대량 가입 로직은 회원, 레거시 회원, 약관, 마일리지 데이터를 함께 생성하므로 일부 단계의 실패가 전체 데이터 정합성에 영향을 줄 수 있었고, 단순 병렬화만으로는 해결하기 어려운 구조였습니다.</p>
+        </div>
+
+        <div class="career-section-block">
+          <h3 class="career-h3">기술적 의사결정</h3>
+          <ul class="career-decision-list">
+            <li>프로파일링을 통해 회원 생성 루프마다 레거시 식별자 시퀀스를 DB에서 조회하는 구조가 네트워크 I/O와 커넥션 사용을 증가시키는 핵심 병목임을 규명했습니다.</li>
+            <li><code>old_member_idx</code> 컬럼에 sequence default를 지정해 식별자 생성 책임을 애플리케이션에서 DB 엔진으로 이관하고, DB sequence의 원자성을 활용해 동시성 안정성을 확보했습니다.</li>
+            <li>JPA/Hibernate가 null 컬럼까지 insert SQL에 포함해 DB default가 동작하지 않는 문제를 분석하고, <code>@DynamicInsert</code>, <code>@Generated(event = INSERT)</code>, <code>updatable = false</code>를 적용했습니다.</li>
+            <li>저장 전에 생성한 식별자를 여러 중간 객체에 복사하지 않고, 회원 저장 이후 DB에서 확정된 레거시 회원 데이터 인덱스를 기준으로 레거시 등록 DTO를 생성하도록 처리 순서를 재설계했습니다.</li>
+            <li>대량 가입 요청·응답 객체는 생성 이후 상태 변경을 최소화하는 방식으로 구성해 청크·병렬 처리 중 중간 데이터 오염 가능성을 낮췄습니다.</li>
+          </ul>
+        </div>
+
+        <div class="career-initiative">
+          <h3 class="career-h3">자발적 개선</h3>
+          <p>요구된 대량 가입 기능 구현 이후 처리 시간이 기대 수준에 미치지 못한다는 문제를 스스로 발견하고, 반복 DB 호출과 JPA insert 메커니즘까지 추적해 구조적 개선안을 제안·적용했습니다.</p>
+        </div>
+
+        <div class="career-impact">
+          <h3 class="career-h3">결과</h3>
+          50건 처리에 약 17초가 소요되던 흐름을 개선해 <strong>100건도 약 15초</strong>에 처리하도록 최적화했습니다. 1건당 평균 처리 시간 기준 약 <strong>56% 성능 향상</strong>을 달성하고, 가입·레거시 동기화 간 데이터 불일치 가능성을 줄였습니다.
+        </div>
+      </article>
+
+      <article class="career-project">
+        <div class="career-project-head">
+          <div>
+            <h2>5. 운영 공수를 줄이고 장애 대응 속도를 높이는 모니터링·배치 구조 개선</h2>
+            <div class="career-stack">Spring Batch · AWS Lambda · Sentry · Slack · PostgreSQL · MySQL</div>
+          </div>
+          <span class="career-badge">운영안정화</span>
+        </div>
+
+        <div class="career-overview">
+          <h3 class="career-h3">배경 및 해결 과제</h3>
+          <p>배송 정보와 기업회원 등록은 수작업 비중이 높았고, 장애는 개별 서버 로그를 확인해야 해 인지와 원인 분석이 늦었습니다. 또한 PostgreSQL과 레거시 MySQL 간 배치에서는 이모지 데이터 적재 오류가 발생했으며, AWS Lambda 기반 Spring Batch는 warm start 상황에서 간헐적으로 Out Of Memory(OOM)가 발생했습니다. 단순 재시작이나 메모리 증설이 아니라 운영 구조 자체를 개선해야 했습니다.</p>
+        </div>
+
+        <div class="career-section-block">
+          <h3 class="career-h3">기술적 의사결정</h3>
+          <ul class="career-decision-list">
+            <li>배송 정보와 기업회원 등록을 청크 단위 대량 처리 API로 전환하고, 중복·기존 데이터 검증, 최대 처리량 제한, 건별 성공·실패 집계를 적용했습니다.</li>
+            <li>중복 운송장처럼 운영 중 예상 가능한 예외는 경고로 분류하고 건너뛰도록 해, 실제 장애와 업무상 예외가 동일한 Sentry 경보로 쌓이지 않도록 했습니다.</li>
+            <li>Sentry 기반 중앙 예외 수집과 GlobalExceptionHandler 중심 공통 로깅 구조를 구축하고, 요청 URI와 환경 정보를 포함한 로그를 Slack 알림 흐름과 연계했습니다.</li>
+            <li>PostgreSQL에서 정상 저장되던 이모지 데이터의 MySQL 적재 실패를 문자셋 차이로 진단하고, MySQL JDBC 연결 옵션을 환경변수화해 배포 환경별 charset 설정을 주입할 수 있도록 했습니다.</li>
+            <li>Lambda 호출마다 <code>SpringApplication.run()</code>이 실행되어 warm start 컨테이너에서 ApplicationContext가 중복 생성되는 것을 OOM 원인으로 규명하고, 싱글톤 컨텍스트 캐싱 구조로 기존 컨텍스트를 재사용했습니다.</li>
+            <li>배치 실행 인수의 민감정보를 마스킹하고, 실패 로깅·예외 전파와 컨텍스트 재사용 검증 테스트를 추가했습니다.</li>
+          </ul>
+        </div>
+
+        <div class="career-initiative">
+          <h3 class="career-h3">자발적 개선</h3>
+          <p>운영자가 반복 수행하던 배송·회원 등록 업무를 시스템화하고, 단순 장애 복구에 그치지 않고 Sentry 경보 노이즈, Lambda warm start, DB 문자셋 차이처럼 반복 장애를 만드는 근본 원인을 추적해 구조 개선으로 연결했습니다.</p>
+        </div>
+
+        <div class="career-impact">
+          <h3 class="career-h3">결과</h3>
+          반복 운영 업무를 대량 처리 API로 전환하고, Sentry–Slack 기반 장애 감지·전파 흐름을 마련했습니다. Lambda warm start 환경의 OOM 원인을 제거해 배치 가용성을 높였으며, 불필요한 장애 경보를 줄여 실제 장애 대응 집중도를 개선했습니다.
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

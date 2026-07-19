@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김다보미 이력서</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 18mm 20mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      color: #111827;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+      font-size: 13px;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 18mm 18mm 20mm;
+    }
+
+    .header {
+      padding-bottom: 18px;
+      border-bottom: 2px solid #111827;
+      margin-bottom: 26px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .role {
+      margin-top: 6px;
+      color: #374151;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-top: 14px;
+      color: #4b5563;
+      font-size: 12px;
+    }
+
+    .contact a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    .skills-section, .education-section, .experience-section {
+      margin-top: 60px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #d1d5db;
+      font-size: 16px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .intro-highlight {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .intro-text {
+      color: #374151;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 18px;
+    }
+
+    .skill-group-title {
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .skill-list {
+      color: #374151;
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 22px;
+    }
+
+    .experience-item:last-child,
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .period {
+      flex: 0 0 auto;
+      color: #6b7280;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .position {
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .promotion {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: -2px 0 8px;
+      padding: 4px 9px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      color: #92400e;
+      font-size: 11.3px;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    .reason {
+      color: #6b7280;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .stack {
+      margin: 6px 0 8px;
+      color: #4b5563;
+      font-size: 12px;
+    }
+
+    .summary {
+      margin-bottom: 8px;
+      color: #374151;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 7px;
+      color: #374151;
+    }
+
+    li strong {
+      color: #111827;
+    }
+
+    .sub-desc {
+      display: block;
+      margin-top: 2px;
+      color: #4b5563;
+    }
+
+    .education-title {
+      font-weight: 800;
+    }
+
+    .education-desc {
+      margin-top: 2px;
+      color: #4b5563;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 16px 0;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #2563eb;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1 class="name">김다보미</h1>
+      <div class="role">Backend Developer · Product Engineer</div>
+      <div class="contact">
+        <span>Phone. 010-3341-0934</span>
+        <span>Email. <a href="mailto:cdabomi60@gmail.com">cdabomi60@gmail.com</a></span>
+        <span><a href="https://github.com/Kimdabomi" target="_blank">GitHub</a></span>
+        <span><a href="https://kimdabomi.github.io" target="_blank">Blog</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Introduction</h2>
+      <p class="intro-highlight">유연한 소통을 바탕으로 합리적인 의사결정을 이끌어내고, 열린 태도로 끊임없이 성장하는 백엔드 개발자입니다.</p>
+      <p class="intro-text">
+        새로운 기술이나 비즈니스 도전에 직면했을 때 두려움보다 호기심을 가지고 주도적으로 마주합니다. 협업 시 뛰어난 소통 역량과 유연한 소프트 스킬을 발휘하여 다양한 이해관계자 속에서도 건강한 논의와 명확한 합의점을 도출해 내는 강점이 있습니다. 동료들의 피드백을 적극적으로 수용하고 이를 업무와 코드에 신속하게 반영하여 개선해 나가는 과정을 즐기며, 이를 통해 팀과 서비스에 긍정적인 시너지를 더합니다.
+      </p>
+    </section>
+
+    <section class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-list">Kotlin · Java · TypeScript · PHP</div>
+        </div>
+        <div>
+          <div class="skill-group-title">Backend & Frontend</div>
+          <div class="skill-list">Spring Boot · Spring Security · Spring Batch · JPA · QueryDSL · React</div>
+        </div>
+        <div>
+          <div class="skill-group-title">Database</div>
+          <div class="skill-list">PostgreSQL · MySQL</div>
+        </div>
+        <div>
+          <div class="skill-group-title">Infra & Tools</div>
+          <div class="skill-list">Jenkins · Docker · Sentry · GitHub Actions</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section">
+      <h2>Work Experience</h2>
+
+      <article class="experience-item">
+        <div class="item-header">
+          <h3>한빛앤</h3>
+          <div class="period">2024.08. ~ 현재</div>
+        </div>
+        <div class="position">Product Engineer</div>
+        <div class="stack">Spring Boot · Kotlin · Java · React · PHP · PostgreSQL · MySQL</div>
+        <p class="summary">
+          백엔드 API 개발을 중심으로 운영툴(Admin)과 사용자 웹 서비스의 프론트엔드 개발을 담당하며, 신규 기능 개발 및 레거시 서비스를 신규 API 구조로 점진 전환, 서비스 운영·유지보수를 수행하고 있습니다. <br />
+          근속 연수 3년이라는 기존의 승진 요건을 깨고, 뛰어난 업무 성과를 인정받아 1년 6개월 만에 사원에서 선임으로 특별 승진했습니다. (2026.03.)
+        </p>
+        <ul>
+          <li>
+            <strong>레거시 주문/결제 시스템의 신규 API 아키텍처 전환 및 점진적 무중단 이관</strong>
+            <span class="sub-desc">빈번한 오류와 이탈률이 높은 PHP 5.4 레거시를 신규 API 구조로 재설계하고 점진적 마이그레이션을 수행하여, 서비스 중단 없이 결제 오류율 0.1% 달성 및 물류 처리 소요 시간을 일 평균 60분에서 즉시 처리로 100% 단축했습니다.</span>
+          </li>
+          <li>
+            <strong>통합 인증 시스템 구축 및 소셜 로그인(OAuth) 도입</strong>
+            <span class="sub-desc">파편화된 레거시 관리자 인증 체계를 단일 시스템으로 일원화하고 카카오/애플 OAuth API 및 웹 클라이언트를 풀스택으로 신규 개발하여, 전년 동기 대비 신규 회원가입 유입률 163.2% 증가 및 시스템 보안성을 확보했습니다.</span>
+          </li>
+          <li>
+            <strong>확장 가능한 표준 게시판 기능 설계 및 CRUD API 개발</strong>
+            <span class="sub-desc">단발성 국가 산업 요구사항 충족을 넘어, 전사 도메인에서 재사용할 수 있는 공통 게시판/게시물/댓글 구조를 추상화·컴포넌트화하여 설계 및 CRUD API를 구축함으로써 향후 서비스 확장의 기반을 다졌습니다.</span>
+          </li>
+          <li>
+            <strong>Sentry 기반 모니터링 체계 구축 및 배치 트러블슈팅</strong>
+            <span class="sub-desc">실시간 장애 감지를 위해 Sentry와 Slack을 연동한 예외 로깅 시스템을 구축하고, AWS Lambda 웜 스타트 환경 내 Spring Batch Context 캐싱 구조 도입을 통한 OOM 장애 해결, 이종 DB(PostgreSQL ↔ MySQL) 간 캐릭터셋 마이그레이션을 통한 데이터 유실 예방 등 시스템 가용성을 높였습니다.</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="item-header">
+          <h3>딜랏</h3>
+          <div class="period">2024.04. ~ 2024.07.</div>
+        </div>
+        <div class="position">Backend Developer</div>
+        <div class="reason">회사 재정 악화로 인한 사업 종료</div>
+        <div class="stack">Firebase · Strapi · TypeScript</div>
+        <ul>
+          <li>GitHub Actions 기반 자동 배포 환경 구축</li>
+          <li>백오피스 데이터 집계 및 관리자 기능 개발</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="item-header">
+          <h3>콜링크</h3>
+          <div class="period">2023.02. ~ 2023.09.</div>
+        </div>
+        <div class="position">Software Developer</div>
+        <div class="reason">회사 재정 악화로 1인 기업으로 전환</div>
+        <ul>
+          <li>워드프레스 기반 웹사이트 제작 및 SEO 최적화</li>
+          <li>백링크 자동화 프로그램 유지보수</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="education-section">
+      <h2>Education</h2>
+
+      <article class="education-item">
+        <div class="item-header">
+          <div class="education-title">항해99 18기 수료</div>
+          <div class="period">2023.12.11. ~ 2024.03.18.</div>
+        </div>
+        <div class="education-desc">Backend 개발 - Spring 심화 과정</div>
+      </article>
+
+      <article class="education-item">
+        <div class="item-header">
+          <div class="education-title">이젠아카데미 국비교육 수료</div>
+          <div class="period">2022.08.08. ~ 2023.01.27.</div>
+        </div>
+        <div class="education-desc">Full-Stack 웹개발자 과정 (Frontend & Backend) · JavaScript · React · Node.js</div>
+      </article>
+
+      <article class="education-item">
+        <div class="item-header">
+          <div class="education-title">목원대학교 졸업</div>
+          <div class="period">2014.03. ~ 2018.08.</div>
+        </div>
+        <div class="education-desc">수학교육과 학사</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
