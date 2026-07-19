@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>김다보미 이력서 및 경력기술서</title>
+  <title>김다보미 이력서</title>
   <style>
     @page {
       size: A4;
@@ -71,7 +71,12 @@
       margin-bottom: 26px;
     }
 
-    .skills-section, .education-section, .experience-section, .career-section {
+    .education-section {
+      break-after: page;
+      page-break-after: always;
+    }
+
+    .skills-section, .education-section, .experience-section {
       margin-top: 60px;
     }
 
@@ -79,7 +84,7 @@
       margin: 0 0 10px;
       padding-bottom: 6px;
       border-bottom: 1px solid #d1d5db;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.3;
       letter-spacing: -0.02em;
       font-weight: 800;
@@ -236,8 +241,6 @@
     }
 
     .career-project {
-      break-inside: avoid;
-      page-break-inside: avoid;
       margin-bottom: 20px;
       padding-bottom: 18px;
     }
@@ -252,7 +255,11 @@
       justify-content: space-between;
       gap: 12px;
       align-items: flex-start;
-      margin: 0 0 10px;
+      margin: 40px 0 10px;
+    }
+
+    .career-project-head:first-child {
+      margin-top: 0;
     }
 
     .career-project-head + .career-project-head {
@@ -351,12 +358,6 @@
 
       a {
         color: #2563eb;
-      }
-
-      .career-project:nth-of-type(2),
-      .career-project:nth-of-type(4) {
-        page-break-after: always;
-        break-after: page;
       }
     }
   </style>
@@ -495,7 +496,7 @@
     </section>
 
     <section class="career-section">
-      <h2>경력기술서</h2>
+      <h2>Project Highlights</h2>
 
       <article class="career-project">
         <div class="career-project-head">
